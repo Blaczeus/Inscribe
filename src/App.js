@@ -1,7 +1,8 @@
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
-import Create from '../pages/Create';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Create from './pages/Create';
+import Blogs from './pages/Blogs';
 
 
 function App ()
@@ -10,9 +11,17 @@ function App ()
     <>
       <Router>
         <Navbar />
-        <Switch>
+        <Routes>
+
           <Route path="/" element={<Home />} />
-        </Switch>
+
+
+          <Route path="/create" element={<Create />} />
+
+
+          <Route path="/blogs" element={<Blogs />} />
+        </Routes>
+
       </Router>
     </>
   );
