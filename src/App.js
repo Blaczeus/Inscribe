@@ -1,30 +1,25 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import CreateBlog from './pages/CreateBlog';
 import Blogs from './pages/Blogs';
+import NotFound from './pages/NotFound';
 
-
-function App ()
-{
+function App() {
   return (
-    <>
-      <Router>
+    <Router>
+      <div className="flex flex-col min-h-screen">
         <Navbar />
         <Routes>
-
-          <Route exact path="/" element={<Home />} />
-
-
+          <Route path="/" element={<Home />} />
           <Route path="/create" element={<CreateBlog />} />
-
-
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
-
-      </Router>
-    </>
+      </div>
+    </Router>
   );
 }
+
 
 export default App;
