@@ -21,7 +21,6 @@ const CreateBlog = () =>
     {
         e.preventDefault();
         console.log( blog );
-        // You can handle form submission logic here
     };
 
     return (
