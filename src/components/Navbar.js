@@ -1,10 +1,9 @@
-
-import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () =>
 {
     return (
-        <nav className="bg-white shadow-md">
+        <nav className="bg-transparent">
             <div className="container flex items-center justify-between px-6 py-4 mx-auto">
                 {/* Logo Section */}
                 <div className="flex items-center space-x-2">
@@ -16,10 +15,10 @@ const Navbar = () =>
                 </div>
 
                 {/* Navigation Links */}
-                <ul className="flex space-x-8 text-gray-700">
-                    <li className="cursor-pointer hover:text-gray-900"><a href="/">Home</a></li>
-                    <li className="cursor-pointer hover:text-gray-900"><a href="/create">New Blog</a></li>
-                    <li className="cursor-pointer hover:text-gray-900"><a href="/blogs">Blogs</a></li>
+                <ul className="flex space-x-20 text-gray-700">
+                    <li className="cursor-pointer hover:text-gray-900"><Link to="/">Home</Link></li>
+                    <li className="cursor-pointer hover:text-gray-900"><Link to="/create">New Blog</Link></li>
+                    <li className="cursor-pointer hover:text-gray-900"><Link to="/blogs">Blogs</Link></li>
                 </ul>
 
                 {/* Log In Button */}
