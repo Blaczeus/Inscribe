@@ -1,7 +1,7 @@
 const Home = () =>
 {
     return (
-        <div className="flex flex-col items-center justify-center px-4 text-center h- md:px-16 lg:px-32">
+        <div className="flex flex-col items-center justify-center px-4 text-center md:px-16 lg:px-32">
             <div
                 aria-hidden="true"
                 className="absolute inset-x-0 overflow-hidden -top-40 -z-10 transform-gpu blur-3xl sm:-top-80"

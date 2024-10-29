@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const CreateBlog = () =>
 {
@@ -8,19 +9,59 @@ const CreateBlog = () =>
         category: '',
         authorName: '',
         authorRole: '',
-        date: '',
     } );
+
+    const navigate = useNavigate();
 
     const handleChange = ( e ) =>
     {
         const { name, value } = e.target;
-        setBlog( { ...blog, [ name ]: value } );
+        setBlog( (prevBlog) => ({ ...prevBlog, [ name ]: value }) );
+    };
+
+    const formatTime = () => {
+        const now = new Date();
+        let hours = now.getHours();
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const seconds = String(now.getSeconds()).padStart(2, '0');
+        const amPm = hours >= 12 ? 'PM' : 'AM';
+    
+        hours = hours % 12 || 12;
+    
+        return `${hours}:${minutes}:${seconds} ${amPm}`;
     };
 
     const handleSubmit = ( e ) =>
     {
         e.preventDefault();
-        console.log( blog );
+        if (blog) {
+            const savedBlogs = JSON.parse(localStorage.getItem("blogs")) || [];
+            const newBlog = {
+                id: Date.now(),
+                title: blog.title,
+                description: blog.description,
+                date: new Date().toLocaleDateString(),
+                time: formatTime(),
+                category: blog.category,
+                author: {
+                    name: blog.authorName,
+                    role: blog.authorRole,
+                    imageUrl:
+                        'https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+                },
+            };
+            savedBlogs.push(newBlog);
+            localStorage.setItem("blogs", JSON.stringify(savedBlogs));
+            setBlog({
+                title: '',
+                description: '',
+                category: '',
+                authorName: '',
+                authorRole: '',
+            });
+            alert("Blog created successfully!");
+            navigate('/blogs');
+        }
     };
 
     return (
