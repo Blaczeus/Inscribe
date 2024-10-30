@@ -5,7 +5,7 @@ const BlogView = ({ blog}) => {
             className="relative overflow-hidden transition rounded-lg shadow-lg group"
         >
             {/* Content Container */}
-            <div className="p-6 space-y-4 group-hover:backdrop-blur-md">
+            <div className="p-6 space-y-4">
                 <div className="flex items-center text-xs gap-x-4">
                     <time dateTime={blog.datetime} className="text-gray-500">
                         {blog.date}
@@ -14,7 +14,7 @@ const BlogView = ({ blog}) => {
                         href={blog.category.href}
                         className=" rounded-full bg-gray-100 px-3 py-1.5 font-medium text-gray-600"
                     >
-                        {blog.category.title}
+                        {blog.category}
                     </a>
                 </div>
 
