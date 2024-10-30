@@ -68,7 +68,7 @@ const CreateBlog = () =>
         <div className="flex items-center justify-center min-h-screen bg-transparent">
             <form
                 onSubmit={handleSubmit}
-                className="w-full max-w-lg p-8 bg-white rounded-lg shadow-md"
+                className="w-full max-w-lg p-8 rounded-lg shadow-md"
             >
                 <h2 className="mb-6 text-3xl font-bold text-center text-gray-800">
                     Create New Blog

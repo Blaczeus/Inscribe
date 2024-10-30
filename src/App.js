@@ -4,7 +4,7 @@ import Home from './pages/Home';
 import CreateBlog from './pages/CreateBlog';
 import Blogs from './pages/Blogs';
 import BlogDetail from './pages/BlogDetail';
-import ErrorPage from './pages/ErrorPage';
+import ErrorPage from "../components/ErrorPage";
 
 function App() {
   return (
