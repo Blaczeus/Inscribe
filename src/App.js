@@ -3,7 +3,8 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import CreateBlog from './pages/CreateBlog';
 import Blogs from './pages/Blogs';
-import NotFound from './pages/NotFound';
+import BlogDetail from './pages/BlogDetail';
+import ErrorPage from './pages/ErrorPage';
 
 function App() {
   return (
@@ -27,8 +28,15 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<CreateBlog />} />
             <Route path="/blogs" element={<Blogs />} />
-            <Route path="/blogs/:blogId" element={<Blogs />} />
-            <Route path="*" element={<NotFound />} />
+            <Route path="/blogs/:blogId" element={<BlogDetail />} />
+            <Route path="*" element={<ErrorPage error={
+              {
+                status: 404,
+                redirect: '/',
+                message: 'Oops! Page not Found',
+                action: 'Go back Home'
+              }
+            } />} />
           </Routes>
         </main>
         <div
