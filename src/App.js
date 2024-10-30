@@ -1,12 +1,13 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
+import ErrorPage from "./components/ErrorPage";
 import Home from './pages/Home';
 import CreateBlog from './pages/CreateBlog';
 import Blogs from './pages/Blogs';
 import BlogDetail from './pages/BlogDetail';
-import ErrorPage from "../components/ErrorPage";
 
-function App() {
+function App ()
+{
   return (
     <Router>
       <div className="flex flex-col min-h-screen">
