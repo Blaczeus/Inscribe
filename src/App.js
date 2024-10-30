@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Switch } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ErrorPage from "./components/ErrorPage";
 import Home from './pages/Home';
@@ -25,7 +25,7 @@ function App ()
         </div>
         <Navbar />
         <main className='flex-grow'>
-          <Switch>
+          <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/create" element={<CreateBlog />} />
             <Route path="/blogs" element={<Blogs />} />
@@ -38,7 +38,7 @@ function App ()
                 action: 'Go back Home'
               }
             } />} />
-          </Switch>
+          </Routes>
         </main>
         <div
           aria-hidden="true"
