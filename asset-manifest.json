@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Inscribe/static/css/main.9b3e463f.css",
-    "main.js": "/Inscribe/static/js/main.fc53a67a.js",
+    "main.js": "/Inscribe/static/js/main.436e2398.js",
     "static/js/453.0ffddd8a.chunk.js": "/Inscribe/static/js/453.0ffddd8a.chunk.js",
     "index.html": "/Inscribe/index.html",
     "main.9b3e463f.css.map": "/Inscribe/static/css/main.9b3e463f.css.map",
-    "main.fc53a67a.js.map": "/Inscribe/static/js/main.fc53a67a.js.map",
+    "main.436e2398.js.map": "/Inscribe/static/js/main.436e2398.js.map",
     "453.0ffddd8a.chunk.js.map": "/Inscribe/static/js/453.0ffddd8a.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9b3e463f.css",
-    "static/js/main.fc53a67a.js"
+    "static/js/main.436e2398.js"
   ]
 }
